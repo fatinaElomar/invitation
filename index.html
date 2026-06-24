@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta property="og:title" content="دعوة زفاف عبدالكريم وسديل" />
+<meta property="og:description" content="يسرنا دعوتكم لحضور حفل زفافنا ومشاركتنا هذه المناسبة السعيدة." />
+<meta property="og:image" content="https://yourdomain.com/invitation-preview.png" />
+<meta property="og:url" content="https://yourdomain.com/invitation" />
+<meta property="og:type" content="website" />
+  <title>عبد الكريم & سديل · دعوة زفاف</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f8f2ec;
+      font-family: 'Amiri', 'Quicksand', serif;
+    }
+
+    @font-face {
+      font-family: 'Samt';
+      src: url('{{ "arbfonts-samt-7017.ttf" | asset_url }}') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+
+    /* ===== VERTICAL SCROLL SYSTEM ===== */
+
+    .book-stage {
+      width: 100%;
+      overflow-x: hidden;
+      background: #ffffff;
+    }
+
+    .invitation-outro {
+      font-size: 1.2rem;
+      padding-top: 27px;
+    }
+
+    .section {
+      position: relative;
+      width: 100%;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2.5rem 2rem;
+      background: #fefcf7;
+      overflow: hidden;
+
+      /* Scroll animations */
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+      /* Paper texture gradient */
+      background-image:
+        radial-gradient(ellipse at 20% 15%, rgba(255, 245, 235, 0.9) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 85%, rgba(240, 225, 210, 0.5) 0%, transparent 55%);
+    }
+
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+
+    /* ===== SECTION 1: PARENTS (والد العريس / والد العروس) ===== */
+    .section-parents {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+    }
+
+    .section-parents {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    /* Background video */
+    .section-parents .bg-video {
+      position: absolute;
+      top: 58%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+
+      /* Optional parallax */
+      translate: 0 var(--parallax-y, 0px);
+
+      /* Optional Ken Burns effect */
+      animation: kenBurns 20s infinite alternate ease-in-out;
+    }
+
+
+
+    /* Content above video */
+    .parents-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-parents::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgb(255 255 255 / 80%) 0%, rgba(255, 255, 255, 0.85) 50%, rgb(255, 255, 255) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .parents-container {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 0 1rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .parents-title {
+      font-family: 'Amiri', serif;
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      color: #3c2c23;
+      text-transform: uppercase;
+      margin: 1.5rem;
+      opacity: 0.6;
+      font-weight: 400;
+    }
+
+    .parent-block {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(230, 210, 198, 0.2);
+    }
+
+    .parent-block:last-child {
+      border-bottom: none;
+    }
+
+    .parent-label {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: #b29686;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .parent-name {
+      font-family: 'Amiri', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: linear-gradient(to right, #b48545 0%, #b78300 25%, #c0914c 50%, #ffce46 75%, #422a0a 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      animation: goldShine 4s linear infinite;
+    }
+
+    .parents-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .parents-divider .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e6d2c6, transparent);
+      max-width: 60px;
+    }
+
+    .parents-divider .icon {
+      color: #dac0b0;
+      font-size: 1rem;
+    }
+
+    /* ===== SECTION 2: COUPLE (our Wedding style) ===== */
+    .section-couple {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      justify-content: flex-end;
+      padding-bottom: 4rem;
+    }
+
+
+
+    .section-couple::after {
+      content: '';
+      position: absolute;
+      top: -15%;
+      left: -38%;
+      right: -10%;
+      bottom: -20%;
+      background-image: url(assets/pic3.JPEG);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      z-index: 0;
+      will-change: transform;
+      translate: 0 var(--parallax-y, 0px);
+      animation: kenBurns 25s infinite alternate ease-in-out;
+    }
+
+    .section-couple::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgb(255 255 255 / 5%) 0%, rgb(255 255 255 / 58%) 38%, rgb(255 255 255) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .couple-container {
+      top: -72px;
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      width: 100%;
+    }
+
+    .couple-our-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      color: #6d5345;
+      margin-bottom: -0.5rem;
+      font-weight: 400;
+    }
+
+    .couple-wedding-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.5rem;
+      color: #3a2a20;
+      letter-spacing: 2px;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .couple-invite-phrase {
+      font-family: 'Amiri', serif;
+      font-size: 0.85rem;
+      color: #8a7060;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .couple-names {
+      font-family: 'Amiri', 'Great Vibes', cursive;
+      font-weight: 700;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #b48545 0%, #f5d78c 25%, #c0914c 50%, #f8e1a1 75%, #b48545 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+      animation: goldShine 4s linear infinite;
+    }
+
+    .couple-names .ampersand {
+      font-weight: 700;
+      color: transparent;
+      font-size: 2.2rem;
+      padding: 0 0.5rem;
+    }
+
+    .couple-date-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .couple-date-side {
+      font-family: 'Amiri', serif;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: #8a7060;
+      text-transform: uppercase;
+    }
+
+    .couple-date-day {
+      font-family: 'Amiri', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #3a2a20;
+      line-height: 1;
+      border-left: 2px solid #c9b09e;
+      border-right: 2px solid #c9b09e;
+      padding: 0 1.2rem;
+    }
+
+    .couple-decoration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .couple-decoration .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e6d2c6, transparent);
+      max-width: 60px;
+    }
+
+    .couple-decoration .icon {
+      color: #dac0b0;
+      font-size: 1.2rem;
+    }
+
+    /* ===== SECTION 3: CALENDAR (gold elegant style) ===== */
+    .section-calendar {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      position: relative;
+      background: #fff;
+    }
+
+    .section-calendar::after {
+      content: '';
+      position: absolute;
+      top: -3%;
+      left: -37%;
+      right: -10%;
+      bottom: -20%;
+      background-image: url(assets/pic2.JPEG);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+      will-change: transform;
+      translate: 0 var(--parallax-y, 0px);
+      animation: kenBurns 22s infinite alternate ease-in-out;
+    }
+
+    .section-calendar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgb(255 255 255 / 82%) 0%, rgba(255, 255, 255, 0.85) 50%, #5d4236 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .section-calendar>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .calendar-rings-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+      color: #c4a882;
+    }
+
+    .calendar-month {
+      font-family: 'Amiri', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #c4a882;
+      letter-spacing: 6px;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    .calendar-year {
+      font-family: 'Amiri', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #c4a882;
+      letter-spacing: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.2rem;
+      max-width: 380px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0.8rem !important;
+      background: linear-gradient(135deg, rgb(255 255 255 / 6%), rgba(255, 255, 255, 0.08));
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgb(31 38 135 / 4%), inset 0 1px 1px rgb(255 255 255 / 8%);
+    }
+
+    .calendar-day-header {
+      font-size: 0.8rem;
+      color: #c4a882;
+      font-weight: 600;
+      text-align: center;
+      padding: 0.4rem 0;
+      font-family: 'Quicksand', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .calendar-day {
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: #5d4236;
+      text-align: center;
+      padding: 0.5rem 0;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calendar-day.empty {
+      visibility: hidden;
+    }
+
+    .calendar-day.highlight {
+      color: #c4a882;
+      font-weight: 700;
+      position: relative;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' fill='none' stroke='%23c4a882' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 85 C50 85 15 60 15 35 C15 15 35 15 50 30 C65 15 85 15 85 35 C85 60 50 85 50 85 Z' /%3E%3C/svg%3E");
+      background-size: 110%;
+      background-position: center 25%;
+      background-repeat: no-repeat;
+    }
+
+    .calendar-leaf-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.8rem 0;
+      color: #c4a882;
+      font-size: 1rem;
+    }
+
+    .calendar-leaf-divider .leaf-line {
+      width: 40px;
+      height: 1px;
+      background: #c4a882;
+    }
+
+    .calendar-location {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .calendar-location .location-pin {
+      font-size: 1.2rem;
+      color: #c4a882;
+    }
+
+    .calendar-location .venue-name {
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #3a2a20;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .calendar-note {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: #8a7060;
+      letter-spacing: 2px;
+      font-family: 'Quicksand', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .location-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      border: 1px solid white;
+      padding: 0.7rem 1.8rem;
+      /* background: linear-gradient(135deg, #c4a882 0%, #b29686 100%); */
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Amiri', serif;
+      font-size: 1rem;
+      border-radius: 8px;
+      /* box-shadow: 0 4px 15px rgba(196, 168, 130, 0.3); */
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    .location-btn:hover {
+      transform: translateY(-2px);
+
+    }
+
+    /* ===== COUNTDOWN SECTION ===== */
+    .section-countdown {
+      background: #fefcf7;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .countdown-the {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #3a2a20;
+      margin-bottom: -0.8rem;
+    }
+
+    .countdown-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+
+      letter-spacing: 8px;
+      color: #3a2a20;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .countdown-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      letter-spacing: 4px;
+      color: #8a7060;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .countdown-timer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .countdown-block {
+      text-align: center;
+    }
+
+    .countdown-number {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #3a2a20;
+      line-height: 1;
+      min-width: 60px;
+    }
+
+    .countdown-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      color: #8a7060;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+      font-weight: 600;
+    }
+
+    .countdown-separator {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #c9b09e;
+      margin-top: -1rem;
+    }
+
+    .countdown-heart-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 2rem;
+    }
+
+    .countdown-heart-outline {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .countdown-heart-outline svg {
+      width: 200px;
+      height: 200px;
+      opacity: 0.15;
+    }
+
+    .countdown-rings {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: #c9b09e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .countdown-message {
+      font-family: 'Holiday2', serif;
+      font-size: 2.5rem;
+      color: #3a2a20;
+      line-height: 1.4;
+      max-width: 300px;
+    }
+
+    /* ===== SECTION 4: SAVE THE DATE ===== */
+    .section-details {
+      text-align: center;
+      padding: 0;
+      position: relative;
+      background-image: url(assets/pic1.JPEG);
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      overflow: hidden;
+    }
+
+    /* Soft blush radial background */
+    .section-details::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, #8a7060 0%, rgba(255, 255, 255, 0.85) 50%, #5d4236 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .section-details>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ---- Save the Date card wrapper ---- */
+    .std-card {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      /* min-height: 100dvh; */
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1.5rem 3rem;
+      z-index: 2;
+    }
+
+    /* ---- Top floral cluster ---- */
+    .std-floral-top {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      margin-bottom: -30px;
+      flex-shrink: 0;
+    }
+
+    /* ---- Butterfly animations ---- */
+    .std-butterfly {
+      position: absolute;
+      opacity: 0.55;
+      animation: bfloat 6s ease-in-out infinite;
+    }
+
+    .std-butterfly:nth-child(2) {
+      animation-delay: -2s;
+    }
+
+    .std-butterfly:nth-child(3) {
+      animation-delay: -4s;
+    }
+
+    @keyframes bfloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(5deg);
+      }
+    }
+
+    /* ---- Big ribbon bow ---- */
+    .std-bow {
+      width: 230px;
+      height: 190px;
+      position: relative;
+      margin-bottom: -55px;
+      flex-shrink: 0;
+      animation: bowBreath 5s ease-in-out infinite;
+    }
+
+    @keyframes bowBreath {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
+    }
+
+
+
+
+    /* ---- Script "Save the date" text ---- */
+    .std-script {
+      font-family: "Aref Ruqaa Ink", serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: #5d4236;
+      margin-top: 0.2rem;
+      animation: fadeSlideUp 1s ease both;
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---- Divider line ---- */
+    .std-divider {
+      width: 60%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d4a4b8, transparent);
+      margin: 1.2rem auto 1rem;
+    }
+
+    /* ---- Couple name ---- */
+    .std-names {
+      font-family: 'Amiri', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: linear-gradient(to right, #b48545 0%, #f5d78c 25%, #c0914c 50%, #f8e1a1 75%, #b48545 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: goldShine 4s linear infinite;
+      text-align: center;
+    }
+
+    /* ---- Year badge ---- */
+    .std-year {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      letter-spacing: 6px;
+      color: #9a7a88;
+      margin-top: 0.3rem;
+    }
+
+    /* ---- Thank-you caption ---- */
+    .std-thanks {
+      margin-top: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: #735b4d;
+      line-height: 1.7;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* ---- Footer flourish ---- */
+    .std-flourish {
+      margin-top: 1.6rem;
+      font-family: 'Holiday2', serif;
+      font-size: 1.4rem;
+      color: #3a2a20;
+      opacity: 0.8;
+      letter-spacing: 2px;
+    }
+
+    @keyframes petalSpin {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+
+      50% {
+        transform: rotate(6deg) scale(1.02);
+      }
+
+      100% {
+        transform: rotate(0deg) scale(1);
+      }
+    }
+
+    @keyframes goldShine {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    @keyframes kenBurns {
+      0% {
+        scale: 1;
+      }
+
+      100% {
+        scale: 1.15;
+      }
+    }
+
+    /* ===== SIMPLE FALLING HEARTS (Canvas) ===== */
+    #heartCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* ===== MUSIC BUTTON ===== */
+    .music-control {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 100;
+      background: rgba(255, 248, 244, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid #e6d2c6;
+      border-radius: 60px;
+      padding: 0.6rem 1.2rem 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 8px 24px rgba(160, 120, 100, 0.12);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #5d4236;
+      letter-spacing: 0.5px;
+      user-select: none;
+    }
+
+    .music-control:hover {
+      background: rgba(255, 248, 244, 0.95);
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(160, 120, 100, 0.18);
+    }
+
+    .music-control .icon {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .music-control .label {
+      font-weight: 500;
+    }
+
+    .music-control .status {
+      font-size: 0.7rem;
+      opacity: 0.6;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .section {
+        padding: 2rem 1.2rem;
+      }
+
+      .parent-name {
+        font-size: 1.3rem;
+      }
+
+      .couple-names {
+        font-size: 3.2rem;
+      }
+
+      .couple-names .ampersand {
+        font-size: 3rem;
+      }
+
+      .couple-invite-phrase {
+        font-size: 1.1rem;
+      }
+
+      .calendar-grid {
+        max-width: 400px;
+        gap: 0.2rem;
+        padding: 0.3rem;
+      }
+
+      .calendar-day {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+      }
+
+      .calendar-month {
+        font-size: 1.6rem;
+      }
+
+      .calendar-location {
+        font-size: 1.1rem;
+        padding: 0.5rem 1.2rem;
+      }
+
+      .details-timeline {
+        padding-left: 2rem;
+      }
+
+      .details-timeline::before {
+        left: 0.5rem;
+      }
+
+      .timeline-item::before {
+        left: -1.9rem;
+        width: 14px;
+        height: 14px;
+      }
+
+      .all-details-title {
+        font-size: 3.5rem;
+        padding-left: 0;
+      }
+
+      .music-control {
+        bottom: 16px;
+        right: 16px;
+        padding: 0.4rem 0.9rem 0.4rem 0.8rem;
+        font-size: 0.75rem;
+      }
+
+      .music-control .icon {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        padding: 1.5rem 1rem;
+      }
+
+      .parent-name {
+        font-size: 2rem;
+      }
+
+      .parent-label {
+        font-size: 22px;
+      }
+
+      .couple-names {
+        font-size: 3.2rem;
+      }
+
+      .couple-names .ampersand {
+        font-size: 1.6rem;
+      }
+
+      .couple-invite-phrase {
+        font-size: 0.95rem;
+      }
+
+      .calendar-grid {
+        max-width: 100%;
+        gap: 0.15rem;
+        padding: 0.2rem;
+        border-radius: 12px;
+      }
+
+      .calendar-day {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+        border-radius: 6px;
+      }
+
+      .calendar-day-header {
+        font-size: 0.6rem;
+        padding: 0.3rem 0;
+      }
+
+      .calendar-month {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .calendar-location {
+        font-size: 0.95rem;
+        padding: 0.4rem 1rem;
+        margin-top: 0.8rem;
+      }
+
+      .calendar-note {
+        font-size: 0.7rem;
+        margin-top: 0.6rem;
+      }
+
+      .timeline-item {
+        margin-bottom: 2.5rem;
+      }
+
+      .details-rings-img {
+        width: 120px;
+        bottom: -100px;
+      }
+
+      .extra-note span {
+        padding: 0.15rem 1.2rem;
+        font-size: 0.8rem;
+      }
+
+      .footer-romance {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* ===== ENVELOPE OVERLAY SYSTEM ===== */
+    body.envelope-active {
+      overflow: hidden !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+    }
+
+    body.envelope-active .section {
+      animation: none !important;
+      opacity: 0 !important;
+      transform: translateY(40px) !important;
+    }
+
+    body.envelope-active .section-divider {
+      animation: none !important;
+      opacity: 0 !important;
+    }
+
+    .envelope-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, #fbf7f2 0%, #ecdccf 100%);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
+      perspective: 1200px;
+    }
+
+    .envelope-wrapper.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .envelope-container {
+      width: 90%;
+      max-width: 480px;
+      position: relative;
+      aspect-ratio: 4 / 3;
+      perspective: 1200px;
+      transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+
+    .envelope {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      box-shadow: 0 30px 60px rgba(120, 80, 60, 0.22),
+        0 15px 25px rgba(120, 80, 60, 0.12);
+      border-radius: 4px;
+    }
+
+    /* Envelope Components */
+    .envelope-flap {
+      position: absolute;
+      top: -326px;
+      left: 22px;
+      width: 100%;
+      z-index: 4;
+      transform-origin: top center;
+      transition: transform 16s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.5s;
+      transform: rotateX(0deg);
+      backface-visibility: visible;
+    }
+
+    .envelope-flap img {
+      width: 87%;
+      height: 100%;
+      display: block;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.06));
+    }
+
+    .envelope-pocket {
+      position: absolute;
+      top: -326px;
+      left: 22px;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .envelope-pocket img {
+      width: 116%;
+      height: 100%;
+      display: block;
+      filter: drop-shadow(0 -5px 10px rgba(0, 0, 0, 0.05));
+    }
+
+    /* Inside Card Peek */
+    .envelope-card {
+      position: absolute;
+      bottom: 4%;
+      left: 4%;
+      width: 92%;
+      height: 88%;
+      background: #fdfcfb;
+      border-radius: 8px;
+      z-index: 2;
+      box-shadow: inset 0 0 25px rgba(190, 150, 130, 0.08), 0 4px 15px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(230, 210, 198, 0.35);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(0);
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .envelope-card-inner {
+      border: 1px double rgba(218, 192, 176, 0.6);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      background: #fdfcfb;
+      padding: 10px;
+    }
+
+    .envelope-card-names {
+      font-family: 'Amiri', serif;
+      font-size: 2.2rem;
+      color: #4f3a31;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .envelope-card-date {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.85rem;
+      color: #a38171;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .envelope-card-tap {
+      font-family: 'Amiri', serif;
+      font-size: 0.95rem;
+      color: #b29686;
+      font-style: italic;
+      animation: gentlePulse 2s infinite ease-in-out;
+    }
+
+    /* Gold Wax Seal */
+    .envelope-seal {
+      position: absolute;
+      top: 50%;
+      left: 29%;
+      width: 120px;
+      height: 120px;
+      transform: translate(-50%, -40%);
+      z-index: 5;
+      cursor: pointer;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+    }
+
+    .envelope-seal img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation: heartbeat 2.2s infinite ease-in-out;
+    }
+
+    .seal-glow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(218, 192, 176, 0.45) 0%, transparent 70%);
+      opacity: 0.8;
+      z-index: -1;
+      animation: sealGlowPulse 2.2s infinite ease-in-out;
+    }
+
+
+
+    /* States when opened */
+    .envelope.open .envelope-seal {
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -40%) scale(0.7) rotate(15deg);
+    }
+
+    /* ===== SPLIT OPENING ANIMATIONS ===== */
+    /* Top flap slides straight to the RIGHT — no rotation */
+    .envelope-flap.fly-right {
+      animation: flapFlyRight 8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      z-index: 6 !important;
+    }
+
+    @keyframes flapFlyRight {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(220%);
+        opacity: 0;
+      }
+    }
+
+    /* Bottom pocket slides straight to the LEFT — no rotation */
+    .envelope-pocket.fly-left {
+      animation: pocketFlyLeft 8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      z-index: 6 !important;
+    }
+
+    @keyframes pocketFlyLeft {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(-220%);
+        opacity: 0;
+      }
+    }
+
+    /* Wrapper fades out after slide */
+    .envelope-wrapper.fade-out {
+      animation: wrapperFade 0.7s ease forwards;
+    }
+
+    @keyframes wrapperFade {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Animations */
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes sealGlowPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: scale(1.4);
+        opacity: 0.95;
+      }
+    }
+
+    @keyframes gentlePulse {
+
+      0%,
+      100% {
+        opacity: 0.5;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes tooltipPulse {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .envelope-container {
+        max-width: 380px;
+      }
+
+      .envelope-card-names {
+        font-size: 1.8rem;
+      }
+
+      .envelope-seal {
+        width: 100px;
+        height: 100px;
+        transform: translate(-50%, -35%);
+      }
+
+      .envelope.open .envelope-seal {
+        transform: translate(-50%, -35%) scale(0.7) rotate(15deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Envelope Overlay -->
+  <div class="envelope-wrapper" id="envelopeWrapper">
+    <div class="envelope-container">
+      <div class="envelope" id="envelope">
+
+        <!-- Envelope Flap -->
+        <div class="envelope-flap" id="envelopeFlap">
+          <img src="assets/top.png" alt="Top Flap">
+        </div>
+        <!-- Envelope Pocket -->
+        <div class="envelope-pocket">
+          <img src="assets/bottom.png" alt="Envelope Pocket">
+        </div>
+        <!-- Gold Wax Seal -->
+        <div class="envelope-seal" id="envelopeSeal" role="button" aria-label="Open Invitation" tabindex="0">
+          <img src="assets/gold%20sign.png" alt="Gold Wax Seal">
+          <div class="seal-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Canvas for simple falling hearts -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Music Control Button -->
+  <div class="music-control" id="musicToggle" role="button" tabindex="0" aria-label="Toggle background music">
+    <span class="icon" id="musicIcon">♪</span>
+    <span class="label">Music</span>
+    <span class="status" id="musicStatus">Off</span>
+  </div>
+
+  <!-- Page fold crease line -->
+  <div class="page-fold-crease" id="pageFoldCrease"></div>
+
+  <!-- Book Stage -->
+  <div class="book-stage" id="bookStage">
+
+    <!-- ===== SECTION 1: PARENTS ===== -->
+    <section class="section section-parents" id="section1" data-page="0">
+
+      <!-- Background Video -->
+      <video class="bg-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/section1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Content -->
+      <div class="parents-container">
+
+        <div class="quran-verse">
+          ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ
+          مَوَدَّةً وَرَحْمَةً ﴾
+        </div>
+
+        <div class="quran-sadaq">
+          صدق الله العظيم
+        </div>
+
+        <div class="parents-title">
+          بدعوة كريمة من
+        </div>
+
+        <div class="parent-block">
+          <span class="parent-label">والد العريس</span>
+          <span class="parent-name">السيد خالد عبد الحافظ نجم</span>
+        </div>
+
+        <div class="parents-divider">
+          <span class="line"></span>
+          <span class="icon">✧</span>
+          <span class="line"></span>
+        </div>
+
+        <div class="parent-block">
+          <span class="parent-label">والد العروس</span>
+          <span class="parent-name">السيد عامر أحمد</span>
+        </div>
+
+        <div class="invitation-outro">
+          يتشرفان بدعوتكم لمشاركتهما فرحة زفاف نجليهما
+        </div>
+
+      </div>
+    </section>
+    <!-- ===== SECTION 2: COUPLE ===== -->
+    <section class="section section-couple" id="section2" data-page="1">
+      <div class="couple-container">
+
+
+        <div class="couple-names">
+          عبد الكريم نجم<br>
+          <span class="ampersand">&</span><br>
+          سديل أحمد
+        </div>
+
+        <div class="couple-decoration">
+          <span class="line"></span>
+          <span class="icon">♡</span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: CALENDAR ===== -->
+    <section class="section section-calendar" id="section3" data-page="2">
+      <div class="calendar-rings-icon">
+        <svg fill="currentColor" width="2.5rem" height="2.5rem" viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M316,192c-21.965,0-42.911,5.946-60,15.44c-16.649-9.276-37.671-15.44-60-15.44c-68.48,0-124,55.52-124,124 s55.52,124,124,124c21.975,0,42.917-5.95,60-15.44c16.657,9.279,37.671,15.44,60,15.44c68.48,0,124-55.52,124-124 S384.48,192,316,192z M296,389.28c28.501-38.677,31.743-90.417,9.12-132.24c-18.491,3.696-32.585,14.654-40,27.2 C288.168,334.948,251.073,392,196,392c-41.92,0-76-34.08-76-76c0-49.56,47.118-86.548,96-73.28 c-28.591,38.804-31.672,90.544-9.12,132.24c18.568-3.717,32.55-14.584,40-27.2c-4.4-9.68-6.88-20.48-6.88-31.76 c0-40.986,33.214-76,76-76c41.92,0,76,34.08,76,76C392,362.896,347.643,403.297,296,389.28z M165.934,116 c2.211-3.828,7.098-5.148,10.93-2.93l20.781,12c3.828,2.211,5.137,7.102,2.93,10.93c-1.484,2.57-4.172,4-6.938,4 c-1.355,0-2.734-0.344-3.992-1.07l-20.781-12C165.035,124.719,163.727,119.828,165.934,116z M311.426,136 c-2.207-3.828-0.898-8.719,2.93-10.93l20.781-12c3.82-2.219,8.711-0.898,10.93,2.93c2.207,3.828,0.898,8.719-2.93,10.93l-20.781,12 c-1.258,0.727-2.637,1.07-3.992,1.07C315.598,140,312.91,138.57,311.426,136z M209.07,102.719c-2.207-3.828-0.895-8.719,2.93-10.93 c3.836-2.219,8.719-0.891,10.93,2.93l4,6.93c2.207,3.828,0.895,8.719-2.93,10.93c-1.262,0.727-2.637,1.07-3.992,1.07 c-2.766,0-5.453-1.438-6.938-4L209.07,102.719z M184,160c4.418,0,8,3.578,8,8s-3.582,8-8,8h-8c-4.418,0-8-3.578-8-8s3.582-8,8-8 H184z M285.07,101.648l4-6.93c2.207-3.82,7.086-5.148,10.93-2.93c3.824,2.211,5.137,7.102,2.93,10.93l-4,6.93 c-1.484,2.563-4.172,4-6.938,4c-1.355,0-2.73-0.344-3.992-1.07C284.176,110.367,282.863,105.477,285.07,101.648z M344,168 c0,4.422-3.582,8-8,8h-8c-4.418,0-8-3.578-8-8s3.582-8,8-8h8C340.418,160,344,163.578,344,168z M248,96V72c0-4.422,3.582-8,8-8 s8,3.578,8,8v24c0,4.422-3.582,8-8,8S248,100.422,248,96z M228.216,143.072c7.145-8.922,20.021-9.402,27.784-1.442 c7.763-7.96,20.64-7.479,27.784,1.442c6.283,7.845,4.913,19.398-2.104,26.594l-19.953,20.46c-3.14,3.22-8.315,3.22-11.455,0 l-19.952-20.46C223.303,162.47,221.933,150.917,228.216,143.072z" />
+        </svg>
+      </div>
+      <div class="calendar-month">تموز</div>
+      <div class="calendar-year">2027</div>
+      <div class="calendar-grid">
+        <div class="calendar-day-header">ح</div>
+        <div class="calendar-day-header">ن</div>
+        <div class="calendar-day-header">ث</div>
+        <div class="calendar-day-header">ر</div>
+        <div class="calendar-day-header">خ</div>
+        <div class="calendar-day-header">ج</div>
+        <div class="calendar-day-header">س</div>
+
+        <!-- July 2027 starts on Thursday -->
+        <div class="calendar-day empty"></div>
+        <div class="calendar-day empty"></div>
+        <div class="calendar-day empty"></div>
+        <div class="calendar-day empty"></div>
+        <div class="calendar-day">1</div>
+        <div class="calendar-day">2</div>
+        <div class="calendar-day">3</div>
+
+        <div class="calendar-day">4</div>
+        <div class="calendar-day">5</div>
+        <div class="calendar-day">6</div>
+        <div class="calendar-day">7</div>
+        <div class="calendar-day">8</div>
+        <div class="calendar-day">9</div>
+        <div class="calendar-day">10</div>
+
+        <div class="calendar-day">11</div>
+        <div class="calendar-day">12</div>
+        <div class="calendar-day">13</div>
+        <div class="calendar-day">14</div>
+        <div class="calendar-day">15</div>
+        <div class="calendar-day">16</div>
+        <div class="calendar-day highlight">17</div>
+
+        <div class="calendar-day">18</div>
+        <div class="calendar-day">19</div>
+        <div class="calendar-dy">20</div>
+        <div class="calendar-day">21</div>
+        <div class="calendar-day ">22</div>
+        <div class="calendar-day">23</div>
+        <div class="calendar-day">24</div>
+
+        <div class="calendar-day">25</div>
+        <div class="calendar-day">26</div>
+        <div class="calendar-day">27</div>
+        <div class="calendar-day">28</div>
+        <div class="calendar-day">29</div>
+        <div class="calendar-day">30</div>
+        <div class="calendar-day">31</div>
+      </div>
+
+      <div class="calendar-leaf-divider">
+        <div class="leaf-line"></div>
+        <span>❧</span>
+        <div class="leaf-line"></div>
+      </div>
+
+      <div class="calendar-location">
+        <span class="location-pin">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="venue-name">Rouge Dori</span>
+      </div>
+
+      <a href="https://maps.google.com/?q=Rouge+Dori" target="_blank" class="location-btn">
+        عرض على الخريطة
+      </a>
+    </section>
+
+
+    <!-- ===== SECTION: COUNTDOWN ===== -->
+    <section class="section section-countdown" id="sectionCountdown">
+      <div class="countdown-the">The</div>
+      <div class="countdown-title">Countdown</div>
+      <div class="countdown-subtitle">to forever has begun...</div>
+
+      <div class="countdown-timer" id="countdownTimer">
+        <div class="countdown-block">
+          <div class="countdown-number" id="cdDays">---</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-block">
+          <div class="countdown-number" id="cdHours">--</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-block">
+          <div class="countdown-number" id="cdMinutes">--</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-block">
+          <div class="countdown-number" id="cdSeconds">--</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+
+      <div class="countdown-heart-container">
+        <div class="countdown-heart-outline">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M100 180 C40 130 10 90 10 60 C10 30 30 10 60 10 C80 10 95 25 100 35 C105 25 120 10 140 10 C170 10 190 30 190 60 C190 90 160 130 100 180Z"
+              stroke="#c9b09e" stroke-width="2" fill="none" />
+          </svg>
+        </div>
+        <div class="countdown-rings">
+          <svg fill="currentColor" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M316,192c-21.965,0-42.911,5.946-60,15.44c-16.649-9.276-37.671-15.44-60-15.44c-68.48,0-124,55.52-124,124 s55.52,124,124,124c21.975,0,42.917-5.95,60-15.44c16.657,9.279,37.671,15.44,60,15.44c68.48,0,124-55.52,124-124 S384.48,192,316,192z M296,389.28c28.501-38.677,31.743-90.417,9.12-132.24c-18.491,3.696-32.585,14.654-40,27.2 C288.168,334.948,251.073,392,196,392c-41.92,0-76-34.08-76-76c0-49.56,47.118-86.548,96-73.28 c-28.591,38.804-31.672,90.544-9.12,132.24c18.568-3.717,32.55-14.584,40-27.2c-4.4-9.68-6.88-20.48-6.88-31.76 c0-40.986,33.214-76,76-76c41.92,0,76,34.08,76,76C392,362.896,347.643,403.297,296,389.28z M165.934,116 c2.211-3.828,7.098-5.148,10.93-2.93l20.781,12c3.828,2.211,5.137,7.102,2.93,10.93c-1.484,2.57-4.172,4-6.938,4 c-1.355,0-2.734-0.344-3.992-1.07l-20.781-12C165.035,124.719,163.727,119.828,165.934,116z M311.426,136 c-2.207-3.828-0.898-8.719,2.93-10.93l20.781-12c3.82-2.219,8.711-0.898,10.93,2.93c2.207,3.828,0.898,8.719-2.93,10.93l-20.781,12 c-1.258,0.727-2.637,1.07-3.992,1.07C315.598,140,312.91,138.57,311.426,136z M209.07,102.719c-2.207-3.828-0.895-8.719,2.93-10.93 c3.836-2.219,8.719-0.891,10.93,2.93l4,6.93c2.207,3.828,0.895,8.719-2.93,10.93c-1.262,0.727-2.637,1.07-3.992,1.07 c-2.766,0-5.453-1.438-6.938-4L209.07,102.719z M184,160c4.418,0,8,3.578,8,8s-3.582,8-8,8h-8c-4.418,0-8-3.578-8-8s3.582-8,8-8 H184z M285.07,101.648l4-6.93c2.207-3.82,7.086-5.148,10.93-2.93c3.824,2.211,5.137,7.102,2.93,10.93l-4,6.93 c-1.484,2.563-4.172,4-6.938,4c-1.355,0-2.73-0.344-3.992-1.07C284.176,110.367,282.863,105.477,285.07,101.648z M344,168 c0,4.422-3.582,8-8,8h-8c-4.418,0-8-3.578-8-8s3.582-8,8-8h8C340.418,160,344,163.578,344,168z M248,96V72c0-4.422,3.582-8,8-8 s8,3.578,8,8v24c0,4.422-3.582,8-8,8S248,100.422,248,96z M228.216,143.072c7.145-8.922,20.021-9.402,27.784-1.442 c7.763-7.96,20.64-7.479,27.784,1.442c6.283,7.845,4.913,19.398-2.104,26.594l-19.953,20.46c-3.14,3.22-8.315,3.22-11.455,0 l-19.952-20.46C223.303,162.47,221.933,150.917,228.216,143.072z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="countdown-message">
+        We can't wait<br>to celebrate<br>with you!
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: SAVE THE DATE ===== -->
+    <section class="section section-details" id="section4" data-page="3">
+      <div class="std-card">
+
+        <!-- Top floral + butterfly decoration -->
+
+
+
+
+
+        <!-- Script text -->
+        <div class="std-script">احفظوا هذا <br>التاريخ</div>
+
+        <!-- Divider -->
+        <div class="std-divider"></div>
+
+
+        <!-- Thank you message -->
+        <div class="std-thanks">
+          شكرًا لكونكم جزءًا من هذه المناسبة الجميلة!
+        </div>
+
+        <!-- Footer flourish -->
+        <div class="std-flourish">♡♡♡</div>
+
+      </div>
+    </section>
+
+  </div><!-- /.book-stage -->
+
+  <script>
+    // ===== SIMPLE FALLING HEARTS (Canvas) =====
+    (function () {
+      const canvas = document.getElementById('heartCanvas');
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let hearts = [];
+      const MAX_HEARTS = 25;
+      let frameId = null;
+
+      function resizeCanvas() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+
+      class Heart {
+        constructor() {
+          this.reset();
+        }
+
+        reset() {
+          this.x = Math.random() * width;
+          this.y = -20 - Math.random() * 60;
+          this.size = 8 + Math.random() * 14;
+          this.speed = 0.4 + Math.random() * 0.9;
+          this.opacity = 0.2 + Math.random() * 0.25;
+          this.rotation = (Math.random() - 0.5) * 0.3;
+          this.rotationSpeed = (Math.random() - 0.5) * 0.008;
+          this.wobble = Math.random() * 0.5 + 0.1;
+          this.wobbleSpeed = 0.006 + Math.random() * 0.008;
+          this.phase = Math.random() * Math.PI * 2;
+          this.color = 'rgba(190, 150, 140, ';
+        }
+
+        update() {
+          this.y += this.speed;
+          this.phase += this.wobbleSpeed;
+          this.x += Math.sin(this.phase) * this.wobble * 0.2;
+          this.rotation += this.rotationSpeed;
+          if (this.y > height + 40) {
+            this.reset();
+            this.y = -20 - Math.random() * 60;
+          }
+        }
+
+        draw(ctx) {
+          const size = this.size;
+          const x = this.x;
+          const y = this.y;
+          const rot = this.rotation;
+          const alpha = this.opacity;
+
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.rotate(rot);
+          ctx.globalAlpha = alpha;
+          ctx.fillStyle = this.color + alpha + ')';
+
+          ctx.beginPath();
+          ctx.moveTo(0, size * 0.2);
+          ctx.bezierCurveTo(-size * 0.5, -size * 0.4, -size * 0.7, size * 0.1, 0, size * 0.6);
+          ctx.bezierCurveTo(size * 0.7, size * 0.1, size * 0.5, -size * 0.4, 0, size * 0.2);
+          ctx.closePath();
+          ctx.fill();
+
+          ctx.restore();
+        }
+      }
+
+      function initHearts(count) {
+        hearts = [];
+        for (let i = 0; i < count; i++) {
+          const h = new Heart();
+          h.y = Math.random() * height * 1.1 - 20;
+          h.x = Math.random() * width;
+          hearts.push(h);
+        }
+      }
+
+      function animateHearts() {
+        ctx.clearRect(0, 0, width, height);
+        for (let heart of hearts) {
+          heart.update();
+          heart.draw(ctx);
+        }
+        frameId = requestAnimationFrame(animateHearts);
+      }
+
+      function startHearts() {
+        if (frameId) cancelAnimationFrame(frameId);
+        resizeCanvas();
+        initHearts(MAX_HEARTS);
+        animateHearts();
+      }
+
+      startHearts();
+
+      window.addEventListener('resize', () => {
+        resizeCanvas();
+        for (let heart of hearts) {
+          heart.x = Math.min(width, heart.x);
+          heart.y = Math.min(height + 40, heart.y);
+        }
+      });
+
+      window.addEventListener('orientationchange', () => {
+        setTimeout(() => {
+          resizeCanvas();
+          for (let heart of hearts) {
+            heart.x = Math.random() * width;
+            heart.y = -20 - Math.random() * 60;
+          }
+        }, 300);
+      });
+    })();
+
+    // ===== SCROLL ANIMATION SYSTEM =====
+    (function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.book-stage .section, .book-stage .section-countdown').forEach(section => {
+        observer.observe(section);
+      });
+    })();
+
+    // ===== COUNTDOWN TIMER =====
+    (function () {
+      const weddingDate = new Date("2026-07-17T00:00:00").getTime();
+      const daysEl = document.getElementById('cdDays');
+      const hoursEl = document.getElementById('cdHours');
+      const minutesEl = document.getElementById('cdMinutes');
+      const secondsEl = document.getElementById('cdSeconds');
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = weddingDate - now;
+
+        if (diff <= 0) {
+          daysEl.textContent = '0';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        daysEl.textContent = days;
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    })();
+
+    // ===== BACKGROUND MUSIC (music.mp3) =====
+    (function () {
+      const toggleBtn = document.getElementById('musicToggle');
+      const iconEl = document.getElementById('musicIcon');
+      const statusEl = document.getElementById('musicStatus');
+
+      // Create audio element with the actual music file
+      const audio = new Audio('music.mp3');
+      audio.loop = true;
+      audio.volume = 0.35;
+      audio.preload = 'none';
+
+      let isPlaying = false;
+      let started = false;
+
+      function fadeIn() {
+        audio.volume = 0;
+        let vol = 0;
+        const step = setInterval(() => {
+          vol = Math.min(vol + 0.02, 0.35);
+          audio.volume = vol;
+          if (vol >= 0.35) clearInterval(step);
+        }, 60);
+      }
+
+      function fadeOut(cb) {
+        let vol = audio.volume;
+        const step = setInterval(() => {
+          vol = Math.max(vol - 0.02, 0);
+          audio.volume = vol;
+          if (vol <= 0) {
+            clearInterval(step);
+            audio.pause();
+            if (cb) cb();
+          }
+        }, 60);
+      }
+
+      function startMusic() {
+        if (!started) {
+          started = true;
+          audio.load();
+        }
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            isPlaying = true;
+            fadeIn();
+            iconEl.textContent = '♫';
+            statusEl.textContent = 'On';
+          }).catch(() => {
+            isPlaying = false;
+            iconEl.textContent = '♪';
+            statusEl.textContent = 'Off';
+          });
+        }
+      }
+
+      function stopMusic() {
+        isPlaying = false;
+        iconEl.textContent = '♪';
+        statusEl.textContent = 'Off';
+        fadeOut();
+      }
+
+      function toggleMusic() {
+        if (isPlaying) {
+          stopMusic();
+        } else {
+          startMusic();
+        }
+      }
+
+      // Expose startMusic for the envelope opener
+      window._startBgMusic = startMusic;
+
+      toggleBtn.addEventListener('click', toggleMusic);
+      toggleBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMusic();
+        }
+      });
+
+      // Auto-start on first user interaction
+      function autoStartMusic() {
+        if (!isPlaying) startMusic();
+        document.removeEventListener('click', autoStartMusic);
+        document.removeEventListener('touchstart', autoStartMusic);
+      }
+
+      document.addEventListener('click', autoStartMusic);
+      document.addEventListener('touchstart', autoStartMusic);
+
+      window.addEventListener('beforeunload', () => {
+        audio.pause();
+      });
+    })();
+
+    // ===== SMOOTH PARALLAX SYSTEM =====
+    (function () {
+      const sections = document.querySelectorAll('.section-parents, .section-couple, .section-calendar, .section-details');
+      let ticking = false;
+
+      function updateParallax() {
+        const windowHeight = window.innerHeight;
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          const centerPos = rect.top + (rect.height / 2);
+          const viewportCenter = windowHeight / 2;
+          const distance = centerPos - viewportCenter;
+          sec.style.setProperty('--parallax-y', `${distance * 0.15}px`);
+        });
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      updateParallax();
+    })();
+
+    // ===== ENVELOPE OPENING LOGIC =====
+    (function () {
+      // Add active class to body on load
+      document.body.classList.add('envelope-active');
+
+      const seal = document.getElementById('envelopeSeal');
+      const envelope = document.getElementById('envelope');
+      const wrapper = document.getElementById('envelopeWrapper');
+
+      if (seal && envelope && wrapper) {
+        const envelopeContainer = wrapper.querySelector('.envelope-container');
+        const envelopeFlap = document.getElementById('envelopeFlap');
+        const envelopePocket = envelope.querySelector('.envelope-pocket');
+
+
+        let opened = false;
+        function openEnvelope() {
+          if (opened) return;
+          opened = true;
+
+          if (window._startBgMusic) window._startBgMusic();
+
+          envelope.classList.add('open');
+
+          envelopeFlap.classList.add('fly-right');
+          envelopePocket.classList.add('fly-left');
+
+          setTimeout(() => {
+            wrapper.classList.add('fade-out');
+          }, 10000); // wait 10 sec
+
+          setTimeout(() => {
+            wrapper.style.display = 'none';
+            document.body.classList.remove('envelope-active');
+            window.scrollTo({ top: 0 });
+          }, 13000);
+        }
+        function openEnvelope() {
+          if (opened) return;
+          opened = true;
+
+          // 1. Start music on open
+          if (window._startBgMusic) window._startBgMusic();
+
+          // Instantly reveal landing content
+          wrapper.classList.add('hidden');
+          document.body.classList.remove('envelope-active');
+          wrapper.style.display = 'none';
+          // Scroll to very top so first section is fully visible
+          window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+
+        seal.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openEnvelope();
+        });
+
+        seal.addEventListener('touchend', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          openEnvelope();
+        });
+
+        // Keyboard accessibility
+        seal.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openEnvelope();
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>
